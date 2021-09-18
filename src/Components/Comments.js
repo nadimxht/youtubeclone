@@ -39,21 +39,25 @@ const Comments = () => {
         'harum non quasi et ratione\ntempore iure ex voluptates in ratione\nharum architecto fugit inventore cupiditate\nvoluptates magni quo et',
     },
   ];
-  const handleClick=(id)=>{
-    alert(id)
+  const handleClick=(mail)=>{
+    alert(mail)
   }
-
+  const displayComment=()=>{
+   return ( commentList.map((comment, key) => (
+      <div className='row' key={key}>
+        <h6>{comment.name}</h6>
+        <span>{comment.body}</span>
+        <br></br>
+        <button onClick={()=>handleClick(comment.email)} >click me </button>
+      </div>)
+    ))
+  }
+  
   return (
-    <div className='col-md-7'>
-      {commentList.map((comment, key) => (
-        <div className='row' key={key}>
-          <h6>{comment.name}</h6><p style={{fontSize:"13px"}}>({comment.email})</p>
-          <span>{comment.body}</span>
-          <br></br>
-          <button onClick={handleClick(comment.id)} >click me </button>
-         
-        </div>
-      ))}
+
+    
+    <div className='col-md'>
+      {displayComment()}
     </div>
   );
 };

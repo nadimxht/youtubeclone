@@ -35,6 +35,7 @@ const SuggestionVideos = () => {
       title: `Rethinking Design Practices — Mark Dalgleish`,
     },
   ];
+
   return (
     <div className='col-md-5'>
       {urlList.map((el, key) => (

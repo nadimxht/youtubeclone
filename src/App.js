@@ -2,28 +2,20 @@ import React from 'react';
 import './App.css';
 import MainVideo from './Components/MainVid';
 import SuggestionVideos from './Components/Suggestion';
+import Navbar from './Components/NavBar'
 
-
-// Rows must be placed within a
-//  .container (fixed-width) or .container-fluid (full-width) for proper alignment and padding
 
 function App() {
   return (
-    <div className='container-fluid'>
-  
-        
+    <div className='container-fluid'> 
+    <Navbar/> 
       <div className='row mt-3'>
-     
-        <MainVideo />
-        
-        <SuggestionVideos />
-        
-        
-        
+        <MainVideo/>
+        <SuggestionVideos />  
       </div>
-    
-      
+     
     </div>
+    
   );
 }
 

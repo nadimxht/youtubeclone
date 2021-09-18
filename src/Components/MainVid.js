@@ -6,7 +6,7 @@ const MainVideo = () => {
     
     <div className='col-md-7'>
       <div className='row'>
-        <iframe
+        <iframe 
           title='react-summet'
           width='756'
           height='425'
